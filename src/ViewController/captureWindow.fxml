@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="589.0" prefWidth="697.0" stylesheets="@dark-theme.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ViewController.CaptureWindowController">
+   <children>
+      <JFXButton layoutX="309.0" layoutY="503.0" onAction="#snap" prefHeight="53.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <FontAwesomeIconView size="40" text="📸" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="90.0" layoutY="505.0" onAction="#repeat" prefHeight="53.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <FontAwesomeIconView size="40" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="valid" layoutX="521.0" layoutY="503.0" onAction="#Validate" prefHeight="53.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <FontAwesomeIconView size="40" text="" />
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="imgHolder" fitHeight="480.0" fitWidth="640.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

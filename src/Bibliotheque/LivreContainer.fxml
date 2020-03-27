@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#DemanderEmrinte" prefHeight="218.0" prefWidth="135.0" styleClass="label-AnchorPane" stylesheets="@../ViewController/dark-theme.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Bibliotheque.LivreContainerController">
+   <children>
+      <ImageView fx:id="img" fitHeight="171.0" fitWidth="121.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="titrelivre" layoutX="48.0" layoutY="189.0" text="Label" />
+   </children>
+</AnchorPane>

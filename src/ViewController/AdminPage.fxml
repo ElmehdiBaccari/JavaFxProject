@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1500.0" styleClass="custom-pane" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.AdminPageController">
+   <children>
+      <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab styleClass="tab-main" text="      Utilisateurs     ">
+                          <content>
+                            <AnchorPane fx:id="AnchorAdmin" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tabUser" layoutX="458.0" layoutY="96.0" onMouseClicked="#showProfile" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="458.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="96.0">
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem fx:id="MenuItem" mnemonicParsing="false" text="Blocker" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TableView>
+                                    <ImageView fx:id="Picture" fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="UName" layoutX="113.0" layoutY="262.0" text="Label :" />
+                                    <Label fx:id="USName" layoutX="245.0" layoutY="262.0" text="Label" />
+                                    <Label fx:id="Imail" layoutX="28.0" layoutY="327.0" text="Adresse Mail :" />
+                                    <Label fx:id="Inumero" layoutX="50.0" layoutY="396.0" text="Numero :" />
+                                    <Label fx:id="Lmail" layoutX="152.0" layoutY="327.0" text="Label" />
+                                    <Label fx:id="Lnumero" layoutX="157.0" layoutY="400.0" text="Label" />
+                                    <JFXTextField fx:id="searchfield" layoutX="604.0" layoutY="41.0" onKeyTyped="#advancedSearch" />
+                                    <Label layoutX="500.0" layoutY="47.0" text="Rechereche :" />
+                                 </children></AnchorPane>
+                          </content>
+                           <content>
+                              <JFXTabPane>
+                                 <tabs>
+                                    <Tab text="Gestion Utilisateur">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="tabUser" layoutX="461.0" layoutY="80.0" onMouseClicked="#showProfile" prefHeight="446.0" prefWidth="509.0">
+                                                   <contextMenu>
+                                                      <ContextMenu>
+                                                         <items>
+                                                            <MenuItem fx:id="MenuItem" mnemonicParsing="false" text="Blocker" />
+                                                         </items>
+                                                      </ContextMenu>
+                                                   </contextMenu>
+                                                </TableView>
+                                                <JFXTextField fx:id="searchfield" layoutX="669.0" layoutY="23.0" onKeyTyped="#advancedSearch" />
+                                                <Label layoutX="567.0" layoutY="29.0" text="Rechereche :" />
+                                                <Label fx:id="UName" layoutX="118.0" layoutY="243.0" text="Label :" />
+                                                <Label fx:id="USName" layoutX="241.0" layoutY="243.0" text="Label" />
+                                                <Label fx:id="Imail" layoutX="108.0" layoutY="352.0" text="Adresse Mail :" />
+                                                <Label fx:id="Inumero" layoutX="108.0" layoutY="304.0" text="Numero :" />
+                                                <Label fx:id="Lmail" layoutX="222.0" layoutY="352.0" text="Label" />
+                                                <Label fx:id="Lnumero" layoutX="188.0" layoutY="304.0" text="Label" />
+                                                <ImageView fx:id="Picture" fitHeight="187.0" fitWidth="239.0" layoutX="91.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab text="Statistiques">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                      </content>
+                                    </Tab>
+                                 </tabs></JFXTabPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="     Salles    ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTabPane layoutX="247.0" layoutY="123.0" prefHeight="587.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab text="Gestion de salles">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="tabSalle" layoutX="500.0" layoutY="68.0" prefHeight="400.0" prefWidth="446.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                              <items>
+                                                                <MenuItem mnemonicParsing="false" onAction="#Delete" text="Supprimer" />
+                                                                  <MenuItem mnemonicParsing="false" onAction="#PrepareUpdate" text="Modifier" />
+                                                              </items>
+                                                            </ContextMenu>
+                                                         </contextMenu></TableView>
+                                                      <JFXTextField fx:id="salleNbrPlace" layoutX="168.0" layoutY="99.0" prefHeight="37.0" prefWidth="263.0" />
+                                                      <JFXTextField fx:id="salleName" layoutX="168.0" layoutY="36.0" prefHeight="37.0" prefWidth="261.0" />
+                                                      <JFXComboBox fx:id="salleType" layoutX="167.0" layoutY="181.0" prefHeight="25.0" prefWidth="183.0" />
+                                                      <JFXButton fx:id="salleChose" layoutX="369.0" layoutY="283.0" onAction="#UploadImage" prefHeight="26.0" prefWidth="45.0" />
+                                                      <JFXTextArea fx:id="salleDes" layoutX="154.0" layoutY="372.0" prefHeight="73.0" prefWidth="283.0" />
+                                                      <Label layoutX="105.0" layoutY="55.0" text="Nom :" textFill="#edf29f">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="106.0" layoutY="181.0" text="Type :" textFill="#edf29f">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="14.0" layoutY="118.0" text="Nombre de places :" textFill="#edf29f">
+                                                         <font>
+                                                            <Font size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="47.0" layoutY="396.0" text="Description :" textFill="#edf29f">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ImageView fx:id="salleImg" fitHeight="129.0" fitWidth="180.0" layoutX="159.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
+                                                      <JFXTextField fx:id="search" layoutX="633.0" layoutY="14.0" onKeyTyped="#research" />
+                                                      <Label layoutX="543.0" layoutY="24.0" text="Recherche :" />
+                                                      <JFXButton fx:id="btnAjouter" layoutX="92.0" layoutY="487.0" onAction="#AjouterSalle" text="Ajouter" />
+                                                      <JFXButton fx:id="btnModifier" layoutX="259.0" layoutY="487.0" onAction="#ModifierSalle" text="Modifier" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="Gestion de demandes">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                       </tabs>
+                                    </JFXTabPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="      Films     ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTabPane prefHeight="940.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab fx:id="Gesiont_films" text="    Gestion Films    " />
+                                          <Tab fx:id="gestion_acteurs" text="    Gestion Acteurs" />
+                                          <Tab fx:id="gestion_realisation" text="    Gestion des Realisation    " />
+                                          <Tab fx:id="stat_films" text="     Statistiques    " />
+                                       </tabs>
+                                    </JFXTabPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="    Sperctacles    ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="Evenement/Sponsoring">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="renewTab31" closable="false" styleClass="tab-main" text="    Bibliothéque    ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTabPane prefHeight="740.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab fx:id="Gestion_livres" text="     Gestion des Livres     ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                          <Tab fx:id="Gestion_empruntes" text="      Gestion des Empruntes      ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                       </tabs>
+                                    </JFXTabPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="     Musée      ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTabPane layoutX="188.0" layoutY="354.0" prefHeight="587.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab fx:id="gerer_visite" text="    Gérer les visites    " />
+                                          <Tab text="    Gérer les collections    ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXTabPane prefHeight="555.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <tabs>
+                                                            <Tab fx:id="ajouter_collection" text="      Ajouter Collection      " />
+                                                            <Tab fx:id="modifier_collection" text="      Collections      " />
+                                                         </tabs>
+                                                      </JFXTabPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="    Gérer les produits     ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXTabPane prefHeight="555.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <tabs>
+                                                            <Tab fx:id="ajouter_Produit" text="     Ajouter Produit     " />
+                                                            <Tab fx:id="modifier_Produit" text="      Produits    " />
+                                                         </tabs>
+                                                      </JFXTabPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                       </tabs>
+                                    </JFXTabPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

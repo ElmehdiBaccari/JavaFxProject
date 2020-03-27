@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="522.0" prefWidth="1064.0" stylesheets="@../ViewController/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bibliotheque.Ajouter_livre_fxmlController">
+   <children>
+      <Button fx:id="btn_ajouter_livre" layoutX="176.0" layoutY="437.0" mnemonicParsing="false" onAction="#ajouter_livre" prefHeight="39.0" prefWidth="81.0" styleClass="toolbar-button" text="Ajouter" />
+      <Button fx:id="btnModif" layoutX="276.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#modifier_livre" prefHeight="39.0" prefWidth="89.0" styleClass="toolbar-button" text="Modifier" />
+      <Label layoutX="8.0" layoutY="67.0" prefHeight="32.0" prefWidth="131.0" text="Titre du livre" textFill="#cd4c4c">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="8.0" layoutY="109.0" prefHeight="32.0" prefWidth="131.0" text="date edition" textFill="#cd4c4c">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="155.0" text="prix  livre" textFill="#cd4c4c">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="197.0" prefHeight="32.0" prefWidth="89.0" text="quantité" textFill="#cd4c4c">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <JFXTextField fx:id="txt_titre" layoutX="195.0" layoutY="70.0" onKeyTyped="#handleMsgKey" promptText="titre du livre" />
+      <ComboBox fx:id="cbox_categorie" layoutX="195.0" layoutY="248.0" onKeyTyped="#handleMsgKey" prefHeight="25.0" prefWidth="147.0" styleClass="jfx-combo-box" stylesheets="@../ViewController/dark-theme.css" />
+      <Label layoutX="29.0" layoutY="244.0" prefHeight="32.0" prefWidth="118.0" text="categorie" textFill="#cd4c4c">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <TableView fx:id="idtable" layoutX="568.0" layoutY="34.0" onMouseClicked="#idtable" prefHeight="292.0" prefWidth="481.0">
+        <columns>
+            <TableColumn fx:id="titreid" prefWidth="88.0" text="Titre" />
+          <TableColumn fx:id="qteid" prefWidth="57.0" text="Quantité" />
+            <TableColumn fx:id="dateid" prefWidth="90.0" text="Date édition" />
+            <TableColumn fx:id="prixid" text="Prix" />
+            <TableColumn fx:id="categorie_id" prefWidth="170.0" text="Catégories" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handledelete" text="delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleupdate" text="modifier" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label fx:id="errorNom" layoutX="349.0" layoutY="87.0" prefHeight="25.0" prefWidth="213.0" textFill="RED" />
+      <Label fx:id="errorprix" layoutX="349.0" layoutY="168.0" prefHeight="25.0" prefWidth="213.0" textFill="RED" />
+      <Label fx:id="errorqte" layoutX="365.0" layoutY="213.0" prefHeight="25.0" prefWidth="213.0" textFill="RED" />
+      <Label fx:id="errorcategorie" layoutX="343.0" layoutY="249.0" prefHeight="25.0" prefWidth="213.0" textFill="RED" />
+      <Label fx:id="errordate" layoutX="349.0" layoutY="134.0" prefHeight="25.0" prefWidth="213.0" textFill="RED" />
+      <StackPane fx:id="bookInfoContainer" layoutX="629.0" layoutY="330.0" styleClass="chart-pie-label" stylesheets="@../image/dark-theme.css" />
+      <JFXTextField fx:id="txt_prix_livre" layoutX="195.0" layoutY="146.0" onKeyTyped="#handleMsgKey" promptText="prix du livre" />
+      <JFXTextField fx:id="txt_quantite_livre" layoutX="195.0" layoutY="194.0" onKeyTyped="#handleMsgKey" promptText="quantité du livre" />
+      <JFXDatePicker fx:id="txt_date_edition" layoutX="195.0" layoutY="112.0" onKeyTyped="#handleMsgKey" promptText="date d'édition" />
+      <PieChart fx:id="bookPieChart" layoutX="556.0" layoutY="333.0" prefHeight="164.0" prefWidth="187.0" />
+      <ImageView fx:id="photoField" fitHeight="132.0" fitWidth="111.0" layoutX="213.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton layoutX="365.0" layoutY="333.0" onAction="#selectImg" text="..." />
+      <Label layoutX="259.0" layoutY="20.0" prefHeight="25.0" prefWidth="89.0" text="rechercher" />
+      <JFXTextField fx:id="searchBox" layoutX="382.0" layoutY="16.0" onKeyTyped="#searchLivre" />
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>

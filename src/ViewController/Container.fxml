@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="Anchor" maxHeight="169.0" maxWidth="228.0" minHeight="128.0" minWidth="201.0" onMouseClicked="#ConsulterSalle" prefHeight="169.0" prefWidth="228.0" styleClass="label-AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.ContainerController">
+    <stylesheets>
+        <URL value="@dark-theme.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="img" fitHeight="116.0" fitWidth="242.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nom" layoutX="31.0" layoutY="130.0" text="Label" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

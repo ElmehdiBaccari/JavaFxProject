@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="muse.AfficherCollectionController">
+   <children>
+      <TableView fx:id="tableviewcoll" layoutX="14.0" layoutY="44.0" prefHeight="487.0" prefWidth="737.0">
+        <columns>
+          <TableColumn fx:id="nomcollection" prefWidth="164.0" text="Nom_collection" />
+          <TableColumn fx:id="datecollection" prefWidth="172.0" text="Date_collection" />
+            <TableColumn fx:id="descriptioncollection" prefWidth="182.0" text="Description" />
+            <TableColumn fx:id="imageCol" prefWidth="235.0" text="image" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnsupprimer" layoutX="190.0" layoutY="552.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Supprimer" />
+      <Button fx:id="btnModifier" layoutX="298.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleModfierAction" prefHeight="25.0" prefWidth="85.0" text="Modifier" />
+      <Button fx:id="pdf" layoutX="414.0" layoutY="552.0" mnemonicParsing="false" onAction="#pdfgenerator" prefHeight="25.0" prefWidth="85.0" text="Print Pdf" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.HomePageController">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true" styleClass="jfx-drawer" />
+      <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab styleClass="tab-main" text="           Cité de la Culture          ">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="     Salles    ">
+                           <content>
+                              <AnchorPane fx:id="anchorSalle" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane fx:id="SPane" layoutX="65.0" layoutY="125.0" prefHeight="440.0" prefWidth="867.0" stylesheets="@dark-theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="125.0">
+                                       <content>
+                                          <JFXMasonryPane fx:id="Man" HSpacing="20.0" VSpacing="20.0" prefHeight="433.0" prefWidth="862.0" styleClass="jfxMasnoryPane" stylesheets="@dark-theme.css" />
+                                       </content>
+                                    </ScrollPane>
+                                    <HBox layoutX="65.0" layoutY="74.0" prefHeight="40.0" prefWidth="426.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAll" styleClass="toolbar-button" text="Tout" />
+                                          <JFXButton fx:id="btnThea" styleClass="toolbar-button" text="Théathre" />
+                                          <JFXButton fx:id="btnCinema" styleClass="toolbar-button" text="Cinema" />
+                                          <JFXButton fx:id="btnFormation" styleClass="toolbar-button" text="Formation" />
+                                          <JFXButton fx:id="btnConf" styleClass="toolbar-button" stylesheets="@dark-theme.css" text="Conférance" />
+                                       </children>
+                                    </HBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="front_film" styleClass="tab-main" text="      Films     " />
+                        <Tab styleClass="tab-main" text="    Sperctacles    ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="Evenement/Sponsoring">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="renewTab31" closable="false" styleClass="tab-main" text="    Bibliothéque    ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane fx:id="SpaneLivre" layoutX="98.0" layoutY="131.0" prefHeight="505.0" prefWidth="805.0" AnchorPane.bottomAnchor="104.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="97.0" AnchorPane.topAnchor="131.0">
+                                       <content>
+                                          <JFXMasonryPane fx:id="manLivre" HSpacing="15.0" VSpacing="25.0" prefHeight="498.0" prefWidth="798.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <HBox layoutX="98.0" layoutY="91.0" prefHeight="40.0" prefWidth="553.0">
+                                       <children>
+                                          <JFXButton fx:id="toutlivre" styleClass="toolbar-button" text="Tout" />
+                                          <JFXButton fx:id="toutEconomie" prefHeight="39.0" prefWidth="99.0" styleClass="toolbar-button" text="Economie" />
+                                          <JFXButton fx:id="toutScience" styleClass="toolbar-button" text="Science" />
+                                          <JFXButton fx:id="toutInformatique" styleClass="toolbar-button" text="Informatique" />
+                                          <JFXButton fx:id="toutMedcine" styleClass="toolbar-button" stylesheets="@dark-theme.css" text="Medecine" />
+                                          <JFXButton fx:id="ToutSport" styleClass="toolbar-button" text="Sport" />
+                                          <JFXButton fx:id="toutArt" styleClass="toolbar-button" text="Art" />
+                                       </children>
+                                    </HBox>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="     Musée      ">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTabPane layoutX="47.0" layoutY="54.0" prefHeight="565.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab fx:id="collectionhome" text="       Collection      ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                          <Tab fx:id="collectionproduit" text="     Produits et Souvenirs">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                          <Tab fx:id="proggramervisite" text="    Programmer une Viste      ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                          <Tab fx:id="consultervisite" text="     Consulter Visite     ">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                       </tabs>
+                                    </JFXTabPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+                  <JFXHamburger fx:id="hamburger" styleClass="jfx-hamburger-icon" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

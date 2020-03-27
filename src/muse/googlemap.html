@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map_canvas { height: 100% }
+        .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    </style>
+     <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?sensor=false">
+
+    </script>   
+   
+    <script type="text/javascript" >
+    	 var map;
+        var marker;
+       var Input;
+       var i=0;
+       
+        function get_click_position(event){
+        	i++;
+            var location = event.latLng;
+            var lat = location.lat();
+            var lng = location.lng();
+            
+             if(i==1)
+            setdepMarkerPosition(lat, lng);
+            else if(i==2){
+            	setdestMarkerPosition(lat, lng);
+            	i=0;
+            }
+            app.handle(lat, lng);
+        }
+            
+
+        
+      
+        function setdepMarkerPosition(lat, lng) {
+            var clickLatLng = new google.maps.LatLng(lat, lng);
+            marker1.setPosition(clickLatLng);
+        }
+        function setdestMarkerPosition(lat, lng) {
+            var clickLatLng = new google.maps.LatLng(lat, lng);
+            marker2.setPosition(clickLatLng);
+        }
+        function activateListener(){
+        	google.maps.event.addListener(map, 'click', get_click_position);
+        }
+
+        function startJumping(){
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        function stopJumping(){
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        function setMapCenter(lat, lng) {
+            var latlng = new google.maps.LatLng(lat, lng);
+            map.setCenter(latlng);
+        }
+
+        function switchSatellite() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
+            map.setOptions(mapOptions);
+            setLightMarkerIcon();
+        }
+
+        function switchRoadmap() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map.setOptions(mapOptions);
+            setDarkMarkerIcon();
+        }
+
+        function switchHybrid() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+            map.setOptions(mapOptions);
+            setLightMarkerIcon();
+        }
+
+        function switchTerrain() {
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            };
+            map.setOptions(mapOptions);
+            setDarkMarkerIcon();
+        }
+ 
+var icon1 = {
+    src: "/assets/pin.png", // url
+    scaledSize: new google.maps.Size(40,40), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+var icon2 = {
+    src: "../assets/pin2.png", // url
+    scaledSize: new google.maps.Size(40,40), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+
+        function initialize() {
+            var defLatLng = new google.maps.LatLng(36.898392, 10.1875433);
+            var mapOptions = {
+                center: defLatLng,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true,
+                panControl: false
+            };
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            
+            
+          
+            marker1 = new google.maps.Marker({
+                
+                map: map,
+                icon: icon1
+            });
+             marker2 = new google.maps.Marker({
+               
+                map: map,
+                icon: icon2
+            });
+            
+            app.handle(0,0);
+            
+            
+        }
+        
+      
+        function setDarkMarkerIcon() {
+            marker.setIcon("pin.png");
+        }
+
+        function setLightMarkerIcon() {
+            marker.setIcon("pin.png");
+        }
+    </script>
+ 
+</head>
+<body onload="initialize()">
+	
+<div id="map_canvas" style="width:100%; height:100%" ></div>
+ 
+</body>
+</html>

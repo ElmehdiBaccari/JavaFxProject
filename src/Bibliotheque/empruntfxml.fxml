@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox stylesheets="@../ViewController/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bibliotheque.EmpruntfxmlController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="786.0">
+         <children>
+            <TableView fx:id="id_table" layoutX="28.0" layoutY="20.0" prefHeight="243.0" prefWidth="713.0">
+              <columns>
+                <TableColumn fx:id="id_nom" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="id_prenom" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="id_titre_livre" prefWidth="116.0" text="Titre livre" />
+                  <TableColumn fx:id="id_d_emprunt" prefWidth="120.0" text="date emprunt" />
+                  <TableColumn fx:id="id_d_retour" prefWidth="106.0" text="date retour" />
+                  <TableColumn fx:id="id_mail" prefWidth="212.0" text="e-mail" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="delete_id" mnemonicParsing="false" onAction="#delete_emprunt" text="delete" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <Button layoutX="616.0" layoutY="285.0" mnemonicParsing="false" onAction="#send_mail" prefHeight="39.0" prefWidth="125.0" styleClass="toolbar-button" text="send mail" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

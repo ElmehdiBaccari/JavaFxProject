@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="814.0" stylesheets="@../ViewController/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinema.AfficherFilmsController">
+   <children>
+      <ScrollPane fx:id="scroll" layoutX="58.0" layoutY="50.0" prefHeight="458.0" prefWidth="646.0">
+         <content>
+            <JFXMasonryPane fx:id="women" HSpacing="30.0" VSpacing="30.0" prefHeight="421.0" prefWidth="643.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="756.0" styleClass="custom-pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.ProfileController">
+    <stylesheets>
+        <URL value="@dark-theme.css" />
+    </stylesheets>
+   <children>
+      <Circle fx:id="myCircle" fill="DODGERBLUE" layoutX="355.0" layoutY="151.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="255.0" />
+      <JFXTextField fx:id="fieldNom" layoutX="94.0" layoutY="318.0" prefHeight="37.0" prefWidth="142.0" AnchorPane.leftAnchor="94.0" />
+      <JFXTextField fx:id="fieldPrenom" layoutX="380.0" layoutY="318.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="306.0" layoutY="324.0" text="Prenom :" textFill="#ddd718" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="323.0" text="Nom :" textFill="#ddd718" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="fieldNumero" layoutX="536.0" layoutY="405.0" prefHeight="37.0" prefWidth="180.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="49.0" layoutY="404.0" text="Date de naisssance :" textFill="#ddd718" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="411.0" text="Numero :" textFill="#ddd718" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="fieldDate" layoutX="172.0" layoutY="394.0" prefHeight="37.0" prefWidth="116.0" AnchorPane.leftAnchor="172.0" />
+      <JFXButton fx:id="imgBtn" layoutX="473.0" layoutY="131.0" onAction="#changeImg" prefHeight="30.0" prefWidth="26.0" styleClass="toolbar-button" text=" " AnchorPane.leftAnchor="473.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="PENCIL" wrappingWidth="1.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="validateBtn" layoutX="255.0" layoutY="463.0" onAction="#Modifier" prefHeight="39.0" prefWidth="207.0" styleClass="toolbar-button" text="Valider Modification" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="294.0" />
+   </children>
+</AnchorPane>

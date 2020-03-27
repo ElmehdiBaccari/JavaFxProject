@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorCreateAcc" prefHeight="540.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.CreateAccountController">
+   <children>
+      <TextField fx:id="fNom" layoutX="303.0" layoutY="90.0" onKeyTyped="#handleMsgKey" promptText="Nom" stylesheets="@../style/tesxtfield.css" />
+      <TextField fx:id="fPrenom" layoutX="303.0" layoutY="134.0" onKeyTyped="#handleMsgKey" promptText="Prenom" stylesheets="@../style/tesxtfield.css" />
+      <TextField fx:id="fMail" layoutX="303.0" layoutY="175.0" onKeyTyped="#handleMsgKey" promptText="Example@example.com" stylesheets="@../style/tesxtfield.css" />
+      <DatePicker fx:id="fDate" layoutX="303.0" layoutY="216.0" prefHeight="25.0" prefWidth="149.0" promptText="Date de naissance" />
+      <Button layoutX="343.0" layoutY="446.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="108.0" text="Terminer" />
+      <Label layoutX="254.0" layoutY="94.0" prefHeight="17.0" prefWidth="46.0" text="Nom :" />
+      <Label layoutX="243.0" layoutY="138.0" text="Prenom :" />
+      <Label layoutX="249.0" layoutY="179.0" text="E-mail :" />
+      <Label layoutX="190.0" layoutY="220.0" text="Date de naissance :" />
+      <Label layoutX="213.0" layoutY="345.0" text="Mot de passe :" />
+      <Label layoutX="158.0" layoutY="388.0" text="Confirmer mot de passe :" />
+      <PasswordField fx:id="pField" layoutX="302.0" layoutY="341.0" onKeyTyped="#handleMsgKey" promptText="Entre 6 et 12 characthéres" stylesheets="@../style/tesxtfield.css" />
+      <PasswordField fx:id="cPField" layoutX="302.0" layoutY="384.0" onKeyTyped="#handleMsgKey" promptText="Valider mot de passe" stylesheets="@../style/tesxtfield.css" />
+      <Label layoutX="460.0" layoutY="94.0" text="*" textFill="#0030ff" />
+      <Label layoutX="461.0" layoutY="138.0" text="*" textFill="#0030ff" />
+      <Label layoutX="461.0" layoutY="179.0" text="*" textFill="#0030ff" />
+      <Label layoutX="460.0" layoutY="345.0" text="*" textFill="#0030ff" />
+      <Label layoutX="460.0" layoutY="388.0" text="*" textFill="#0030ff" />
+      <Label layoutX="299.0" layoutY="418.0" text="(*) : Champs obligatoires" textFill="#0030ff" />
+      <Label fx:id="errorNom" layoutX="481.0" layoutY="94.0" textFill="RED" />
+      <Label fx:id="errorPrenom" layoutX="481.0" layoutY="138.0" textFill="RED" />
+      <Label fx:id="errorMail" layoutX="481.0" layoutY="179.0" textFill="RED" />
+      <Label fx:id="errorMdp" layoutX="480.0" layoutY="345.0" textFill="RED" />
+      <Label fx:id="errorCmdp" layoutX="480.0" layoutY="388.0" textFill="RED" />
+      <Button fx:id="imageBtn" layoutX="411.0" layoutY="298.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="25.0" prefWidth="40.0" text="..." />
+      <TextField fx:id="photoField" layoutX="303.0" layoutY="298.0" prefHeight="25.0" prefWidth="96.0" promptText="png , jpg ,jpeg" />
+      <Label layoutX="249.0" layoutY="302.0" text="Photo :" />
+      <Label layoutX="169.0" layoutY="261.0" text="Numero de téléphone :" />
+      <TextField fx:id="numberField" layoutX="303.0" layoutY="257.0" onKeyTyped="#handleMsgKey" promptText="+216" stylesheets="@../style/tesxtfield.css" />
+      <Label fx:id="numberError" layoutX="466.0" layoutY="261.0" textFill="RED" />
+      <Button layoutX="48.0" layoutY="33.0" mnemonicParsing="false" onAction="#GoToLogin" text="back" />
+      <Button layoutX="464.0" layoutY="298.0" mnemonicParsing="false" onAction="#Capture" text="Capture" />
+   </children>
+</AnchorPane>

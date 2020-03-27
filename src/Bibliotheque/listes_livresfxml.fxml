@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="778.0" stylesheets="@../image/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bibliotheque.Listes_livresfxmlController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="675.0">
+         <children>
+            <TableView fx:id="idtable" layoutX="118.0" layoutY="78.0" prefHeight="291.0" prefWidth="638.0">
+              <columns>
+                <TableColumn fx:id="titreid" prefWidth="107.0" text="Titre du livre" />
+                <TableColumn fx:id="categorie_id" prefWidth="128.0" text="categorie_livre" />
+                  <TableColumn fx:id="prixid" prefWidth="116.0" text="prix du livre" />
+                  <TableColumn fx:id="qteid" prefWidth="158.0" text="quantite disponible" />
+                  <TableColumn fx:id="dateid" prefWidth="108.0" text="date édition" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="id_emprunt" mnemonicParsing="false" onAction="#demander_emprunt" text="demande d'emprunt" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <Button fx:id="btn_emprunt" layoutX="50.0" layoutY="378.0" mnemonicParsing="false" onAction="#consulter_emprunt" prefHeight="39.0" prefWidth="200.0" text="Consulter les emprunts" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

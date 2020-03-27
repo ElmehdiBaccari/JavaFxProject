@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../ViewController/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bibliotheque.Ajouter_empruntController">
+   <children>
+      <JFXDatePicker fx:id="id_d_emprunt" layoutX="215.0" layoutY="46.0" prefHeight="47.0" prefWidth="236.0" />
+      <JFXDatePicker fx:id="id_r_emprunt" layoutX="215.0" layoutY="120.0" prefHeight="47.0" prefWidth="236.0" />
+      <Label layoutX="37.0" layoutY="58.0" prefHeight="35.0" prefWidth="150.0" text="Date d'emprunt" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="132.0" prefHeight="35.0" prefWidth="150.0" text="Date de retour" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="id_emprunt" layoutX="103.0" layoutY="223.0" onAction="#ajouter_emprunt" prefHeight="54.0" prefWidth="133.0" styleClass="toolbar-button" text="emprunter" />
+      <JFXButton layoutX="257.0" layoutY="223.0" onAction="#cancel" prefHeight="54.0" prefWidth="133.0" styleClass="toolbar-button" text="back" />
+   </children>
+</AnchorPane>
